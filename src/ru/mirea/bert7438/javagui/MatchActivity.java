@@ -9,39 +9,17 @@ public class MatchActivity extends JFrame{
     private JLabel winLabel;
     private JLabel scorerLabel;
     private JLabel resLabel;
+    private JPanel rootPanel;
 
-    public MatchActivity(JButton realMadridButton, JButton ACMilanButton, JLabel winLabel, JLabel scorerLabel, JLabel resLabel) throws HeadlessException {
-        this.realMadridButton = realMadridButton;
-        this.ACMilanButton = ACMilanButton;
-        this.winLabel = winLabel;
-        this.scorerLabel = scorerLabel;
-        this.resLabel = resLabel;
+    Font fnt = new Font("Consolas", Font.BOLD, 16);
+
+    public MatchActivity(){
+        setSize(1280,720);
+        setContentPane(rootPanel);
+        setVisible(true);
     }
 
-    public MatchActivity(GraphicsConfiguration gc, JButton realMadridButton, JButton ACMilanButton, JLabel winLabel, JLabel scorerLabel, JLabel resLabel) {
-        super(gc);
-        this.realMadridButton = realMadridButton;
-        this.ACMilanButton = ACMilanButton;
-        this.winLabel = winLabel;
-        this.scorerLabel = scorerLabel;
-        this.resLabel = resLabel;
-    }
-
-    public MatchActivity(String title, JButton realMadridButton, JButton ACMilanButton, JLabel winLabel, JLabel scorerLabel, JLabel resLabel) throws HeadlessException {
-        super(title);
-        this.realMadridButton = realMadridButton;
-        this.ACMilanButton = ACMilanButton;
-        this.winLabel = winLabel;
-        this.scorerLabel = scorerLabel;
-        this.resLabel = resLabel;
-    }
-
-    public MatchActivity(String title, GraphicsConfiguration gc, JButton realMadridButton, JButton ACMilanButton, JLabel winLabel, JLabel scorerLabel, JLabel resLabel) {
-        super(title, gc);
-        this.realMadridButton = realMadridButton;
-        this.ACMilanButton = ACMilanButton;
-        this.winLabel = winLabel;
-        this.scorerLabel = scorerLabel;
-        this.resLabel = resLabel;
+    public static void main(String[] args) {
+        new MatchActivity();
     }
 }
